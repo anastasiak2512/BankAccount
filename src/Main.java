@@ -1,11 +1,17 @@
 import java.io.*;
 import java.lang.*;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello!");
+        Scanner scan = new Scanner(System.in);
+        int x;
+        x = scan.nextInt();
+        System.out.println(x);
 
+//        System.out.println("Hello!");
+//
 //        System.out.println("What's your name?");
 //
 //        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -14,12 +20,12 @@ public class Main {
 //        try {
 //            str = br.readLine();
 //        } catch (IOException e) {
-//            e.printStackTrace();
+//            //e.printStackTrace();
 //            str = "Unknown";
 //        }
 //
 //        System.out.println("Hello, " + str + "!");
-
+//
 //        System.out.println("How old are you?");
 //        int age;
 //
@@ -38,14 +44,21 @@ public class Main {
 //
 //        System.out.println("You were probably born in " + (2014 - age));
 
-//        Bank bank = new Bank();
-//        Person first = new Person("First", 37);
-//        Person second = new Person("Second", 77);
-//        long id;
-//        id = bank.addClient(second);
-//        System.out.println(second.getName() + " has account with number " + id);
-//        id = bank.addClient(first);
-//        System.out.println(first.getName() + " has account with number " + id);
+        Bank bank = new Bank();
+        Person first = new Person("First", 37);
+        Person second = new Person("Second", 77);
+        long id;
+        id = bank.addClient(second);
+        System.out.println(second.getName() + " has account with number " + id);
+        id = bank.addClient(first);
+        System.out.println(first.getName() + " has account with number " + id);
+
+        /* At home: back with unique id for clients
+        * - create some accounts
+        * - add money
+        * - check account for client
+        * - get money from the account
+        */
 
         //About coping objects
 //        Foo f = new Foo();
@@ -57,6 +70,7 @@ public class Main {
 //
 //        Foo t = new Boo1();
 //        t.runTest();
+//        //t.test;
 //
 //        f = t;
 //        f.runTest();
